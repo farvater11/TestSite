@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Mid{
+    <h2>Registration</h2>
+    @using(Html.BeginForm("RegistrationDone", "Home"))
+    {
+        <label>Username</label>@Html.TextBox("username")<br />
+        <label>Email</label>@Html.TextBox("email")<br />
+        <label>Password</label>@Html.TextBox("password")<br />
+        <label>Confirm password</label> @Html.TextBox("confPassword")<br />
+
+        <input type="submit", name="operation", value="Registration"/>
+    }
+}
+

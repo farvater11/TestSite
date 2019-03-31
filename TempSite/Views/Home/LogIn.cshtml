@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Mid{
+    <h2>LogIn</h2>
+
+    @using (Html.BeginForm("LoginDone", "Home"))
+    {
+        <label>Username</label>@Html.TextBox("userName")<br />
+        <label>Password</label>@Html.TextBox("password")<br />
+        <input type="submit" value="Login" name ="operation"/>
+    }
+}
+
